@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "io.rapidz.library"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 28
