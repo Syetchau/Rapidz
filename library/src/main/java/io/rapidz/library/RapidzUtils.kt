@@ -8,7 +8,7 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
-object Utils {
+object RapidzUtils {
 
     const val DEFAULT_FIAT_FORMAT = "#,##0.00"
     private const val DEFAULT_CRYPTO_FORMAT = "#,##0.########"
