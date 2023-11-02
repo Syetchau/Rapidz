@@ -42,3 +42,13 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            groupId = "com.github.Syetchau.Rapidz"
+            artifactId = "RapidzLib"
+            version = "1.0.0"
+        }
+    }
+}
