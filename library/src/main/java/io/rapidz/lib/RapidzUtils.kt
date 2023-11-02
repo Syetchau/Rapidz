@@ -1,4 +1,4 @@
-package io.rapidz.library
+package io.rapidz.lib
 
 import android.content.Context
 import android.util.Patterns
@@ -8,17 +8,15 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.NumberFormat
 
-class RapidzUtils {
+object RapidzUtils {
 
-    companion object {
-        const val DEFAULT_FIAT_FORMAT = "#,##0.00"
-        private const val DEFAULT_CRYPTO_FORMAT = "#,##0.########"
+    const val DEFAULT_FIAT_FORMAT = "#,##0.00"
+    private const val DEFAULT_CRYPTO_FORMAT = "#,##0.########"
 
-        private const val FORMAT_PW_LOWER_CASE = "[a-z]"
-        private const val FORMAT_PW_UPPER_CASE = "[A-Z]"
-        private const val FORMAT_PW_A_DIGIT = "\\d"  //"\\d"
-        private const val FORMAT_PW_A_SPECIAL_CHAR = "[@$!%*#?&]"
-    }
+    private const val FORMAT_PW_LOWER_CASE = "[a-z]"
+    private const val FORMAT_PW_UPPER_CASE = "[A-Z]"
+    private const val FORMAT_PW_A_DIGIT = "\\d"  //"\\d"
+    private const val FORMAT_PW_A_SPECIAL_CHAR = "[@$!%*#?&]"
 
     fun isEmailValid(email: String): Boolean {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
