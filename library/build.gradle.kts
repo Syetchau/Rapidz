@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
+    `maven-publish`
 }
 
 android {
@@ -45,10 +45,11 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("mavenJava") {
+        create<MavenPublication>("ReleaseAar") {
             groupId = "com.github.Syetchau.Rapidz"
             artifactId = "RapidzLib"
             version = "1.0.0"
+            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
         }
     }
 }
