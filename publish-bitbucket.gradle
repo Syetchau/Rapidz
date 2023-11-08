@@ -19,6 +19,7 @@ dependencies {
 task androidJavadocs(type: Javadoc) {
     failOnError false
     source = android.sourceSets.main.java.sourceFiles
+    source = android.sourceSets.main.kotlin.sourceFiles
 }
 
 task androidSourcesJar(type: Jar) {
