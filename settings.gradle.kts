@@ -11,6 +11,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven(url = "https://jitpack.io")
+
+        // Wagon-git
+        maven(url = "https://raw.github.com/synergian/wagon-git/releases")
     }
 }
 
