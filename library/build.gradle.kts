@@ -39,13 +39,65 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
 }
 
+artifacts {
+    archives(file("$buildDir/outputs/aar/${project.name}-release.aar")) // eg. "$buildDir/outputs/aar/${project.getName()}-release.aar"
+}
+
 publishing {
     publications {
-        create<MavenPublication>("ReleaseAar") {
-            groupId = "com.github.Syetchau.Rapidz"
-            artifactId = "RapidzLib"
+        create<MavenPublication>("mavenAar") {
+            groupId = "com.rapidz"
             version = "1.0.0"
-            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+            artifactId = "android.library"
+
+            artifact(file("$buildDir/outputs/aar/${project.name}-release.aar")) // Replace "aar location" with the actual location of your AAR file
+
+            pom.withXml {
+                val dependenciesNode = asNode().appendNode("dependencies")
+
+                configurations["implementation"].allDependencies.forEach { dependency ->
+                    val dependencyNode = dependenciesNode.appendNode("dependency")
+                    dependencyNode.appendNode("groupId", dependency.group)
+                    dependencyNode.appendNode("artifactId", dependency.name)
+                    dependencyNode.appendNode("version", dependency.version)
+                }
+            }
+
+            afterEvaluate {
+                artifact(tasks.getByName("bundleReleaseAar"))
+            }
         }
+
+        repositories {
+            maven {
+                credentials {
+                    username = "Charles_liew"
+                    password = "@Chau050495"
+                }
+
+                name = "android-rapidz-library"
+                setUrl("")
+            }
+        }
+
+//        repositories {
+//            maven {
+//                name = "android-rapidz-library"
+//                setUrl( "/Users/charlesliew/StudioProjects/Rapidz/") // location where build generated
+//            }
+//        }
     }
 }
+
+
+// This is for publish to Github
+//publishing {
+//    publications {
+//        create<MavenPublication>("ReleaseAar") {
+//            groupId = "com.github.Syetchau.Rapidz"
+//            artifactId = "RapidzLib"
+//            version = "1.0.0"
+//            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+//        }
+//    }
+//}

@@ -1,0 +1,71 @@
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 34
+}
+
+repositories {
+    maven { url "https://raw.github.com/synergian/wagon-git/releases" }
+}
+
+configurations {
+    deployLibrary
+}
+
+dependencies {
+    deployLibrary "ar.com.synergian:wagon-git:0.2.5"
+}
+
+task androidJavadocs(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+artifacts {
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}
+
+//https://bitbucket.org/companyname/yourRepo/
+def urlExists(String repositoryUrl) {
+
+    try {
+        def connection = (HttpURLConnection) new URL(repositoryUrl).openConnection()
+
+        connection.setRequestProperty("Authorization", "Basic " + getBase64EncodedCredentials())
+        connection.setConnectTimeout(10000)
+        connection.setReadTimeout(10000)
+        connection.setRequestMethod("HEAD")
+        def responseCode = connection.getResponseCode()
+        println("responseCode: " + responseCode)
+
+        if (responseCode == 401) {
+            throw new RuntimeException("Unauthorized BitBucket user - please provide valid username and password in gradle.properties file")
+        }
+
+        return (200 == responseCode)
+
+    } catch (IOException ignored) {
+        return false
+    }
+}
+
+def getBase64EncodedCredentials() {
+    def s = USERNAME + ":" + PASSWORD;
+    return s.bytes.encodeBase64().toString()
+}
+
+ext {
+    urlExists = this.&urlExists
+    getBase64EncodedCredentials = this.&getBase64EncodedCredentials
+}
