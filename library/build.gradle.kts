@@ -47,7 +47,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenAar") {
             groupId = "com.rapidz"
-            version = "1.0.0"
+            version = "1.0.1"
             artifactId = "android.library"
 
             artifact(file("$buildDir/outputs/aar/${project.name}-release.aar")) // Replace "aar location" with the actual location of your AAR file
