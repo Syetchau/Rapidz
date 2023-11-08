@@ -62,30 +62,14 @@ publishing {
                     dependencyNode.appendNode("version", dependency.version)
                 }
             }
-
-            afterEvaluate {
-                artifact(tasks.getByName("bundleReleaseAar"))
-            }
         }
 
         repositories {
             maven {
-                credentials {
-                    username = "Charles_liew"
-                    password = "@Chau050495"
-                }
-
                 name = "android-rapidz-library"
-                setUrl("")
+                setUrl( "/Users/charlesliew/StudioProjects/Rapidz/") // location where build generated
             }
         }
-
-//        repositories {
-//            maven {
-//                name = "android-rapidz-library"
-//                setUrl( "/Users/charlesliew/StudioProjects/Rapidz/") // location where build generated
-//            }
-//        }
     }
 }
 
