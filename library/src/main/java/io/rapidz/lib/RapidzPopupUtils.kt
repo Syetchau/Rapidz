@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import io.rapidz.library.databinding.DialogTwoButtonWithIconBinding
 
-object RapidzUi {
+object RapidzPopupUtils {
 
     fun showTwoButtonDialog(
         context: Context,
