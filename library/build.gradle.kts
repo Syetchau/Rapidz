@@ -52,6 +52,7 @@ dependencies {
  * Built AAR and commit & push to bitbucket
  * Comment these lines if publishing to Github, as it will return error and unable to release nxt version
  */
+
 artifacts {
     archives(file("$buildDir/outputs/aar/${project.name}-release.aar")) // eg. "$buildDir/outputs/aar/${project.getName()}-release.aar"
 }
