@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- region Override -->
+
+	<!-- set large value to make sure the sheet peek height in collapsed state will be wrap_content -->
+	<dimen name="design_bottom_sheet_peek_height_min">10000dp</dimen>
+
+	<!-- endregion -->
+
+	<!-- region Padding -->
+	<dimen name="padding_xxs">2dp</dimen>
+	<dimen name="padding_xs">4dp</dimen>
+	<dimen name="padding_x">8dp</dimen>
+	<dimen name="padding_m">12dp</dimen>
+	<dimen name="padding_l">16dp</dimen>
+	<dimen name="padding_xl">20dp</dimen>
+	<dimen name="padding_xxl">32dp</dimen>
+	<dimen name="padding_xxxl">40dp</dimen>
+	<dimen name="padding_xxxxl">50dp</dimen>
+	<dimen name="padding_cl">60dp</dimen>
+	<dimen name="padding_cxl">70dp</dimen>
+	<dimen name="padding_cxxl">80dp</dimen>
+	<dimen name="padding_cxxxl">90dp</dimen>
+
+	<dimen name="padding_xxs_n">-2dp</dimen>
+	<dimen name="padding_xs_n">-4dp</dimen>
+	<dimen name="padding_s_n">-8dp</dimen>
+	<dimen name="padding_m_n">-12dp</dimen>
+	<dimen name="padding_l_n">-16dp</dimen>
+	<dimen name="padding_xl_n">-20dp</dimen>
+	<dimen name="padding_xxl_n">-32dp</dimen>
+	<dimen name="padding_xxxl_n">-40dp</dimen>
+	<dimen name="padding_cl_n">-60dp</dimen>
+	<dimen name="padding_cxxxl_n">-90dp</dimen>
+
+	<dimen name="padding_bottom">30dp</dimen>
+	<dimen name="padding_no_internet">200dp</dimen>
+	<dimen name="padding_home_without_actionbar">20dp</dimen>
+	<dimen name="padding_filter_title">24dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Corner Radius -->
+	<dimen name="corner_radius_s">4dp</dimen>
+	<dimen name="corner_radius_m">6dp</dimen>
+	<dimen name="corner_radius_l">8dp</dimen>
+	<dimen name="corner_radius_xl">12dp</dimen>
+	<dimen name="corner_radius_xxl">14dp</dimen>
+	<dimen name="corner_radius_xxxl">18dp</dimen>
+	<dimen name="corner_radius_infinite">1000dp</dimen> <!-- Full circle -->
+	<dimen name="corner_radius_timer">27dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Radius -->
+	<dimen name="blur_radius_snackbar">6dp</dimen>
+	<dimen name="radius_ripple_ib">29dp</dimen>
+	<dimen name="radius_ripple_ib_small">20dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Elevation -->
+	<dimen name="elevation_s">2dp</dimen>
+	<dimen name="elevation_m">4dp</dimen>
+	<dimen name="elevation_l">6dp</dimen>
+	<dimen name="elevation_xl">8dp</dimen>
+	<dimen name="elevation_cxl">18dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Drawable Padding -->
+	<dimen name="drawable_padding_s">4dp</dimen>
+	<dimen name="drawable_padding_m">6dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Text Size -->
+	<dimen name="txt_size_min_auto_resize">8dp</dimen>
+	<dimen name="txt_size_xxxs">8dp</dimen>
+	<dimen name="txt_size_xxs">10dp</dimen>
+	<dimen name="txt_size_xs">12dp</dimen>
+	<dimen name="txt_size_s">14dp</dimen>
+	<dimen name="txt_size_m">16dp</dimen>
+	<dimen name="txt_size_l">18dp</dimen>
+	<dimen name="txt_size_xl">20dp</dimen>
+	<dimen name="txt_size_xxl">22dp</dimen>
+	<dimen name="txt_size_xxxl">24dp</dimen>
+	<dimen name="txt_size_xxxxl">30dp</dimen>
+	<dimen name="txt_size_total_amt">30dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Text Size in dp -->
+	<dimen name="txt_size_dp_xxxs">8dp</dimen>
+	<dimen name="txt_size_dp_xxs">10dp</dimen>
+	<dimen name="txt_size_dp_xs">12dp</dimen>
+	<dimen name="txt_size_dp_s">14dp</dimen>
+	<dimen name="txt_size_dp_m">16dp</dimen>
+	<dimen name="txt_size_dp_l">18dp</dimen>
+	<dimen name="txt_size_dp_xl">20dp</dimen>
+	<dimen name="txt_size_dp_xxl">22dp</dimen>
+	<dimen name="txt_size_dp_xxxl">24dp</dimen>
+	<dimen name="txt_size_dp_xxxxl">30dp</dimen>
+	<!-- endregion -->
+
+	<!-- region Icon Size -->
+	<dimen name="ic_review_login_merchant_logo">100dp</dimen>
+	<dimen name="ic_swap">36dp</dimen>
+	<dimen name="ic_list_item">30dp</dimen>
+	<dimen name="ic_crypto_type">20dp</dimen>
+	<dimen name="ic_close">118dp</dimen>
+	<dimen name="ic_collapse">40dp</dimen>
+	<dimen name="ic_crypto_circle">20dp</dimen>
+	<dimen name="ic_crypto_circle_large">40dp</dimen>
+	<!-- endregion -->
+
+	<!--region Size -->
+	<dimen name="height_toolbar">80dp</dimen>
+	<dimen name="height_toolbar_logo">30dp</dimen>
+	<dimen name="width_navigation_view_header_logo">153dp</dimen>
+	<dimen name="height_auto_size_txt">35dp</dimen>
+	<dimen name="height_transaction_complete_crypto_amt_txt">28dp</dimen>
+	<dimen name="size_switch">24dp</dimen>
+	<dimen name="stroke_width_switch_thumb">6dp</dimen>
+	<dimen name="size_max_qr_code">400dp</dimen>
+	<!-- endregion -->
+
+</resources>
