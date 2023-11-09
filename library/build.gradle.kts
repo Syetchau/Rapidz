@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-android")
+//    id("kotlin-android")
     `maven-publish`
 }
 
@@ -43,8 +43,8 @@ dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10")
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }
 
 artifacts {
@@ -55,7 +55,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenAar") {
             groupId = "com.rapidz"
-            version = "1.0.1"
+            version = "1.0.2"
             artifactId = "android.library"
 
             artifact(file("$buildDir/outputs/aar/${project.name}-release.aar")) // Replace "aar location" with the actual location of your AAR file
